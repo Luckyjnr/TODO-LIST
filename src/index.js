@@ -1,17 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import App from './App.jsx';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+const Data = [
+  { Id: "Todo-0", Name: "Eat", Completed: true },  // Corrected 'True' to 'true'
+  { Id: "Todo-1", Name: "Sleep", Completed: false }, // Corrected 'False' to 'false'
+  { Id: "Todo-2", Name: "Repeat", Completed: false }, // Corrected 'False' to 'false'
+];
+
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <App tasks={Data} />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
